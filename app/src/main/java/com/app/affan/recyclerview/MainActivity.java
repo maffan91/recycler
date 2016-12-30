@@ -1,5 +1,6 @@
 package com.app.affan.recyclerview;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,18 +15,20 @@ public class MainActivity extends AppCompatActivity {
     List<Movie> movieList;
     RecyclerView recyclerView;
     MovieAdapter adapter;
+    List<Contact> contactList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         movieList = new ArrayList<>();
-        prepareMovieData();
+        contactList = new ArrayList<>();
         adapter = new MovieAdapter(this,movieList);
+        prepareMovieData();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler);
         recyclerView.setAdapter(adapter);
     }
 
@@ -79,5 +82,66 @@ public class MainActivity extends AppCompatActivity {
         movieList.add(movie);
 
         adapter.notifyDataSetChanged();
+    }
+
+
+
+    private void prepareMockContacts(){
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Bob","bob@gmail.com","323 111 333"));
+        contactList.add(new Contact("Brian","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+        contactList.add(new Contact("Allen","allen@gmail.com","123 111 333"));
+        contactList.add(new Contact("Alice","alice@gmail.com","786 111 333"));
+        contactList.add(new Contact("Alex","alex@gmail.com","323 111 333"));
+
     }
 }
