@@ -1,4 +1,4 @@
-package com.app.affan.recyclerview;
+package com.app.affan.recyclerview.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.app.affan.recyclerview.model.Movie;
+import com.app.affan.recyclerview.R;
 
 import java.util.List;
 

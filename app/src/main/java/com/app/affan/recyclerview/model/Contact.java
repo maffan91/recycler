@@ -1,4 +1,4 @@
-package com.app.affan.recyclerview;
+package com.app.affan.recyclerview.model;
 
 /**
  * Created by maffan on 12/30/2016.
